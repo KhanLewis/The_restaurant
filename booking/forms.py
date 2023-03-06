@@ -1,8 +1,13 @@
 from .models import Booking
-from django import forms
+from django.forms import ModelForm, widgets
 
 
-class BookingForm(forms.ModelForm):
+class BookingForm(ModelForm):
     class Meta:
         model = Booking
-        fields = ('name', 'email', 'phone', 'people', 'special_requirements','date', 'time')
+        fields = ('__all__')
+        exclude = ('owner',)
+        widgets = {
+            'date': widgets.DateInput(attrs={'type': 'date'}),
+            'time': widgets.DateInput(attrs={'type': 'time'})
+        }

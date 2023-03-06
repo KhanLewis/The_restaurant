@@ -21,8 +21,11 @@ class MakeBookingView(View):
 
     def post(self, request, *args, **kwargs):
         form = self.form(data=request.POST)
+        form.owner = request.user
         if form.is_valid():
-            form.save()
+            saved_booking = form.save()
+            saved_booking.owner = request.user
+            saved_booking.save()
             return HttpResponseRedirect('/mybooking/')
 
         return render(request, self.template_name, {'form': form})
@@ -31,8 +34,11 @@ class MakeBookingView(View):
 class MyBookingView(generic.ListView):
     queryset = Booking.objects.all()
     template_name = "view_booking.html"
-
+    def get_object_list(self, request):
+        obj = Booking.object.filter(owner=request.user)
+    
 
 class MenuView(generic.ListView):
+
     model = Booking
     template_name = "menu.html"
