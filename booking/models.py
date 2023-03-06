@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Booking(models.Model):
+    # user
     name = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.IntegerField()
@@ -10,3 +11,6 @@ class Booking(models.Model):
     special_requirements = models.TextField()
     date = models.DateField()
     time = models.TimeField()
+
+    def __str__(self):
+        return self.name
