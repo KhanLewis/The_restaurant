@@ -2,8 +2,13 @@
 {% block content %}
 <div class="container-fluid">
     <h1 class="center">My Bookings</h1>
-    {% for booking in queryset %}
-    <div><p> {{ booking.name }} </p></div>
+    {% for booking in booking %}
+    <div>
+        <h3>{{ booking.name }}</h3>
+        <h3>{{ booking.time }}</h3>
+        <h3>{{ booking.date }}</h3>
+
+    </div>
     {% endfor %}
 
 
