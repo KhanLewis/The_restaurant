@@ -9,5 +9,5 @@ class BookingForm(ModelForm):
         exclude = ('owner',)
         widgets = {
             'date': widgets.DateInput(attrs={'type': 'date'}),
-            'time': widgets.DateInput(attrs={'type': 'time'})
+            'time': widgets.TimeInput(attrs={'type': 'time'})
         }

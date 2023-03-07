@@ -2,13 +2,15 @@
 {% block content %}
 <div class="container-fluid">
     <h1 class="center">My Bookings</h1>
-    {% for booking in booking %}
+    {% for booking in bookings %}
     <div>
         <h3>{{ booking.name }}</h3>
         <h3>{{ booking.time }}</h3>
         <h3>{{ booking.date }}</h3>
-
+        <h3>{{ booking.special_reqiurement }}</h3>
     </div>
+    <a class="btn" href="{% url 'update_booking' booking.pk %}">Edit</a>
+    <a class="btn" href="{% url 'delete_booking' booking.pk %}">Delete</a>
     {% endfor %}
 
 
