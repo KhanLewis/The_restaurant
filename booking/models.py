@@ -13,7 +13,7 @@ class Booking(models.Model):
 
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = PhoneNumberField()
+    phone = PhoneNumberField(null=False, blank=False, unique=True)
     people = models.IntegerField()
     special_requirements = models.TextField(blank=True)
     date = models.DateField()
