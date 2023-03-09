@@ -44,7 +44,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{% url 'my_booking' %}">My Bookings</a></li>
                             <li><a class="dropdown-item" href="{% url 'booking' %}">Make A Booking</a></li>
-                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a></li>
                         </ul>
                     </div>
                     {% else %}
@@ -75,8 +75,7 @@
     <footer>
         <div class="card text-center">
             <div class="card-header">
-                <a action="facebook.com"><i class="fa-brands fa-facebook"></i> </a>
-                <a action="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+               <p>Welcome to The Restaruant</p>
             </div>
             {% if user.is_authenticated %}
             <div class="card-body">
