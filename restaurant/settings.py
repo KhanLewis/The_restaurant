@@ -50,8 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'crispy_forms',
-    'phonenumber_field',
-    'phonenumbers',
     'booking',
 ]
 
@@ -69,7 +67,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 
 }
-PHONENUMBER_DEFAULT_REGION = 'GB'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [

@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
-from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 
@@ -13,7 +12,7 @@ class Booking(models.Model):
 
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = PhoneNumberField(null=False, blank=False, unique=True)
+    phone = models.IntegerField(null=False)
     people = models.IntegerField()
     special_requirements = models.TextField(blank=True)
     date = models.DateField()
