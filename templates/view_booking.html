@@ -4,10 +4,30 @@
     <h3 class="center">My Bookings</h3>
     {% for booking in bookings %}
     <div>
-        <h3>{{ booking.name.capitalize }}</h3>
+        <!-- <h3>{{ booking.name.capitalize }}</h3>
         <h3>{{ booking.time }}</h3>
         <h3>{{ booking.date }}</h3>
-        <h3>{{ booking.special_requirements}}</h3>
+        <h3>{{ booking.special_requirements}}</h3> -->
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Time</th>
+                <th scope="col">Date</th>
+                <th scope="col">special_requirements</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td>{{ booking.name.capitalize }}</td>
+                <td>{{ booking.time }}</td>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.special_requirements}}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <a class="btn btn-secondary" href="{% url 'update_booking' booking.pk %}">Edit</a>
     <a class="btn delete" href="{% url 'delete_booking' booking.pk %}">Delete</a>
