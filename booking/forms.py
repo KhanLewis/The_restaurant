@@ -1,5 +1,6 @@
 from .models import Booking
 from django.forms import ModelForm, widgets
+from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 
 class BookingForm(ModelForm):
@@ -9,5 +10,5 @@ class BookingForm(ModelForm):
         exclude = ('owner',)
         widgets = {
             'date': widgets.DateInput(attrs={'type': 'date'}),
-            'time': widgets.TimeInput(attrs={'type': 'time'})
+            'time': widgets.TimeInput(attrs={'type': 'time'}),
         }

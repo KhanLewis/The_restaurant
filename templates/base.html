@@ -30,20 +30,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
+
                     <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
-                    <a class="nav-link" href="{% url 'booking'%}">Booking</a>
+                    <a class="nav-link" href="{% url 'booking' %}">Booking</a>
                     <a class="nav-link" href="{% url 'menu'%}">Menu</a>
+
                     {% if user.is_authenticated %}
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          My Account
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            My Account
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{% url 'my_booking'%}">My Bookings</a></li>
-                          <li><a class="dropdown-item" href="{% url 'booking'%}">Make A Booking</a></li>
-                          <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'my_booking' %}">My Bookings</a></li>
+                            <li><a class="dropdown-item" href="{% url 'booking' %}">Make A Booking</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                         </ul>
-                      </div>
+                    </div>
                     {% else %}
                     <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a>
                     <a class="nav-link" href="{% url 'account_login' %}">login</a>
@@ -52,6 +55,18 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     <main>
         {% block content %}
         <!-- Content in here! :) -->
@@ -60,21 +75,37 @@
     <footer>
         <div class="card text-center">
             <div class="card-header">
-               <a action="facebook.com"><i class="fa-brands fa-facebook"></i> </a>
-                 <a action="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a action="facebook.com"><i class="fa-brands fa-facebook"></i> </a>
+                <a action="instagram.com"><i class="fa-brands fa-instagram"></i></a>
             </div>
+            {% if user.is_authenticated %}
+            <div class="card-body">
+                <h5 class="card-title">Make a Booking!</h5>
+                <p class="card-text">Hungry? Thirsty? Bored? Make a booking!</p>
+                <a href="{% url 'booking' %}" class="btn btn-primary">Book Now!</a>
+            </div>
+            {% else %}
             <div class="card-body">
                 <h5 class="card-title">Have you signed up?</h5>
-                <p class="card-text">If you want to book at <strong>The Restaruant</strong> Please make a account using the link below</p>
+                <p class="card-text">If you want to book at <strong>The Restaruant</strong> Please make a account using
+                    the link below</p>
                 <p>if you already have an account please login</p>
-                <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign up</a>
-                <a href="{% url 'account_login' %}" class="btn btn-primary">Login</a>
+                <a href="{% url 'account_signup' %}" class="btn btn-secondary">Sign up</a>
+                <a href="{% url 'account_login' %}" class="btn btn-secondary">Login</a>
             </div>
+            {% endif %}
             <div class="card-footer text-muted">
                 COPYRIGHT The Restaruant
             </div>
         </div>
     </footer>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2500);
+    </script>
 </body>
 
 </html>
