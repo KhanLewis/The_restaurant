@@ -50,8 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'crispy_forms',
-    'django_phonenumber_field',
-    'django_phonenumbers',
+    'phonenumber_field',
+    'phonenumbers',
     'booking',
 ]
 
