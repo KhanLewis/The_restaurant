@@ -1,6 +1,5 @@
 from .models import Booking
 from django.forms import ModelForm, widgets
-from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 
 class BookingForm(ModelForm):
