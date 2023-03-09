@@ -36,3 +36,7 @@ body {
 .delete:hover{
     background-color: rgba(255, 76, 48)
 }
+
+.nav-link:hover{
+    text-decoration: underline;
+}

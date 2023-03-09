@@ -8,13 +8,13 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+    <div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
 
 
       <h1>{% trans "Sign In" %}</h1>
 
 
-      <p>{% blocktrans %}loggin or signup to book faster and not miss out!
+      <p>{% blocktrans %}Login or Signup to Book
         <a href="{{ signup_url }}">Sign up</a> first.{% endblocktrans %}</p>
 
       <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -24,7 +24,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <!-- <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> -->
-        <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+        <button class="primaryAction btn btn-secondary" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
