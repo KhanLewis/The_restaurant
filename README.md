@@ -5,7 +5,7 @@ https://the-restaurant.herokuapp.com/
 
 Welcome to The Restaurant.  We offer all the best trending dishes at a Michelin star level at the fraction of the price. We aim to be able to give a taste of culture from all over the world. By providing Customers with A selection of expertly created dishes we hope that we can provide a place where families can meet, friends can bond, and strangers can get along comfortably. We have personally made sure that our restaurant is accessible by all.
 
-
+<img src="media/readme/am_i_responsive.png" width="100%" height="100%">
 ## **User Stories:**
 
 
