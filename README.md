@@ -6,8 +6,9 @@ https://the-restaurant.herokuapp.com/
 Welcome to The Restaurant.  We offer all the best trending dishes at a Michelin star level at the fraction of the price. We aim to be able to give a taste of culture from all over the world. By providing Customers with A selection of expertly created dishes we hope that we can provide a place where families can meet, friends can bond, and strangers can get along comfortably. We have personally made sure that our restaurant is accessible by all.
 
 <img src="media/readme/am_i_responsive.png" width="100%" height="100%">
-## **User Stories:**
 
+## **User Stories:**
+#### See the restuarant project in repository
 
 ### Using Agile
 <img src="media/readme/User_story_agile.png" width="100%" height="100%">
@@ -99,6 +100,7 @@ No issues found, using PEP8
   * Step 1: The user will click on the navigation bar link "booking" 
   * Step 2: the user will be greeted with a form displaying the fields name,email,phone,people,special requirements,date,time.
   * Step 3: The user will be notified if their booking was successful then redirected to thier 'My bookings' page.
+  <img src="media/readme/booking.png" width="100%" height="100%">
 
 ## Menu page
 * The user will click the menu page on the navigation bar.
@@ -113,13 +115,44 @@ No issues found, using PEP8
 * The user will see the heading and a message underneath
 * The user will see a form with the fields username, email, password, password again, signup button
 * The user will see a confirmation message after they signed up and then be redirected to the homepage
+<img src="media/readme/sign_up.png" width="100%" height="100%">
 
 ## login page 
 * The user will click on the login button on the nav bar
-* The user will see a form with the fields 
+* The user will see a form with the fields username, password
+* The user will click sign in and will be redirected to home page
+<img src="media/readme/login.png" width="100%" height="100%">
+
+## my bookings page
+* the user will click on the my account dropdown
+* the user will click my booking button
+* the user will see their bookings
+* the user will be able to edit and delete their bookings using the edit and delete buttons
+<img src="media/readme/my_booking.png" width="100%" height="100%">
+
+## signout page
+* the user will press on the my account dropdown
+* the user will click the signout button
+* the user will be redirected to the sign out page 
+* the user will see a message saying they successfully signed out
+<img src="media/readme/sign_out.png" width="100%" height="100%">
+
+
+# Bugs
+I encounted these bugs:
+* user wasnt able to view bookings on their my bookings page
+* 
 
 ## **Light house**
 <img src="media/readme/lighthouse.png" width="100%" height="100%">
+
+ # **Supported Screen Sizes:**
+  I have tested these device sizes using googles developer tools.
+
+  * Iphone 12 pro
+  * Iphone SE
+  * Iphone XR
+  * Nest Hub Max
 
 # **Deployment**
 ## Heroku
@@ -133,6 +166,14 @@ No issues found, using PEP8
   * scroll down to the bottom of the page to the manual deploy section
   * choose a branch to deploy (main or master)
   * Press deploy branch
+
+  ## GITPOD:
+ * This site was also viewed through a browser using Gitpod, This is how I achieved this :
+   * Open your repository through Github.
+   * At the top of yout repository click on the gitpod button.
+   * When it had loaded adn you can view your code, within the terminal type "python3 -m http.server"
+   * Wait for the pop up in the bottom right hand corner of Gitpod.
+   * Select the _open browser_ option and it will redirect you to your webpage.
 
 # Acknowledgements and Credits
 * code institute 

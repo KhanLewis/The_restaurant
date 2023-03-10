@@ -7,7 +7,6 @@ body {
     text-align: center;
     margin: auto;
 }
-
 #image-1 {
     background-image: url("/static/images/mid1.png");
     background-size: contain;
