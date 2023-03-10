@@ -72,13 +72,15 @@ class BookingUpdateView(LoginRequiredMixin, TemplateView):
 
     def get(self, request, pk, *args, **kwargs):
         form = self.form(data=request.POST)
-        booking = Booking.objects.get(pk=pk)
+        user = request.user
+        booking = get_object_or_404(Booking, pk=pk, owner=user)
         form = BookingForm(instance=booking)
 
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, pk, *args, **kwargs):
-        booking = Booking.objects.get(pk=pk)
+        user = request.user
+        booking = get_object_or_404(Booking, pk=pk, owner=user)
         form = BookingForm(data=request.POST, instance=booking)
         form.instance.owner = request.user
         if form.is_valid():
@@ -102,7 +104,7 @@ class BookingUpdateView(LoginRequiredMixin, TemplateView):
         return render(request, self.template_name, {'form': form})
 
 
-class DeleteBooking(LoginRequiredMixin, DeleteView):
+class DeleteBooking(LoginRequiredMixin, TemplateView):
     login_url = reverse_lazy('account_login')
     model = Booking
     template_name = 'delete_booking.html'

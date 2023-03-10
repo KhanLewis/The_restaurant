@@ -81,6 +81,12 @@ Welcome to The Restaurant.  We offer all the best trending dishes at a Michelin 
 ## **HTML Vaildator** 
 NO errors or bugs found within the code. Validated on Official W3C Validator - [CLICK HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-restaurant.herokuapp.com%2F)   
 
+## **CSS Validator**
+NO errors found within CSS code (only errors regarding bootstrap). Validated by  Official Jigsaw - [CLICK HERE](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthe-restaurant.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+## **Python validator**
+No issues found, using PEP8
+
 # Test cases:
 ## Home Page 
  * Step 1: The user will see the landing page, the tittle of the page at the top left next to navigation links.
@@ -111,11 +117,6 @@ NO errors or bugs found within the code. Validated on Official W3C Validator - [
 ## login page 
 * The user will click on the login button on the nav bar
 * The user will see a form with the fields 
-
-
-
-## **CSS Validator**
-NO errors found within CSS code. Validated by  Official Jigsaw - [CLICK HERE]()
 
 ## **Light house**
 <img src="media/readme/lighthouse.png" width="100%" height="100%">

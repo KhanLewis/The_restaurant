@@ -8,6 +8,21 @@ body {
     margin: auto;
 }
 
+#image-1 {
+    background-image: url("/static/images/salmon.png");
+    background-repeat:no-repeat;
+    width: 100%;
+}
+
+#image-2 {
+    background-image: url("/static/images/wine.png");
+    background-repeat:no-repeat;
+    width: 100%;
+}
+.height{
+    height: 26rem
+}
+
 .btn-secondary:hover {
     background-color: darkblue
 }
