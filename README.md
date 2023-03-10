@@ -141,7 +141,9 @@ No issues found, using PEP8
 # Bugs
 I encounted these bugs:
 * user wasnt able to view bookings on their my bookings page
-* 
+* user couldnt edit booking wouldnt load there previous bookings 
+* user would get 404 on delete of booking 
+* user couldnt enter a phone number 
 
 ## **Light house**
 <img src="media/readme/lighthouse.png" width="100%" height="100%">
@@ -160,11 +162,14 @@ I encounted these bugs:
   * Create a new app 
   * Within the new app click on the settings tab
   * Open the reveal config vars section
+   * enter in your required config vars:
+   <img src="media/readme/config.png" width="100%" height="100%">
   * Enter in you variables 
   * Navigate to the deploy tab
   * Click on github and enter in the name of your repository 
   * scroll down to the bottom of the page to the manual deploy section
   * choose a branch to deploy (main or master)
+  * remove collectstatic and make sure the debug is set to false
   * Press deploy branch
 
   ## GITPOD:
