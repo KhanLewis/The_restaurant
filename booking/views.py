@@ -40,6 +40,10 @@ class MakeBookingView(LoginRequiredMixin, View):
                     'This booking is not available')
             else:
                 form.save()
+                messages.add_message(
+                    request,
+                    messages.SUCCESS,
+                    'You have successfully added a booking ')
                 return HttpResponseRedirect('/mybooking/')
 
         return render(request, self.template_name, {'form': form})
@@ -89,6 +93,10 @@ class BookingUpdateView(LoginRequiredMixin, TemplateView):
                     'This booking is not available')
             else:
                 form.save()
+                messages.add_message(
+                    request,
+                    messages.SUCCESS,
+                    'You have successfully updated a booking')
                 return HttpResponseRedirect('/mybooking/')
 
         return render(request, self.template_name, {'form': form})
@@ -103,6 +111,10 @@ class DeleteBooking(LoginRequiredMixin, DeleteView):
         user = request.user
         exsiting_booking = get_object_or_404(Booking, pk=pk, owner=user)
         exsiting_booking.delete()
+        messages.add_message(
+                    request,
+                    messages.ERROR,
+                    'The booking has been deleted')
         return HttpResponseRedirect('/mybooking/')
 
 
