@@ -176,7 +176,7 @@ I encounted these bugs:
  * This site was also viewed through a browser using Gitpod, This is how I achieved this :
    * Open your repository through Github.
    * At the top of yout repository click on the gitpod button.
-   * When it had loaded adn you can view your code, within the terminal type "python3 -m http.server"
+   * When it had loaded adn you can view your code, within the terminal type "python3 manage.py runserver"
    * Wait for the pop up in the bottom right hand corner of Gitpod.
    * Select the _open browser_ option and it will redirect you to your webpage.
 
